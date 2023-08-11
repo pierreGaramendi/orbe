@@ -1,0 +1,7 @@
+{
+  "name": "orbe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
