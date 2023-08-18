@@ -1,0 +1,43 @@
+<ion-split-pane contentId="submain-content">
+  <ion-menu contentId="submain-content" type="overlay">
+    <ion-content [fullscreen]="true">
+      <ion-list id="inbox-list">
+        <div class="grid-container">
+          <div class="grid-item">
+            <img style="width:48px;height:48px;border-radius: 8px;"
+              src="https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" alt="Image User">
+          </div>
+          <div class="grid-item" style="padding-left: 6px;">
+            <div class="user-name">
+              {{user.name}}
+            </div>
+            <div class="user-email">
+              {{user.email}}
+            </div>
+          </div>
+        </div>
+
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+          <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+            routerLinkActive="selected">
+            <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+            <ion-label>{{ p.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-item lines="none" detail="false" (click)="loginOut()">
+          <ion-icon slot="start" name="log-out-outline"></ion-icon>
+          <ion-label>Cerrar Sesion</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="submain-content">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  </ion-router-outlet>
+</ion-split-pane>

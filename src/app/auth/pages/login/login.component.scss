@@ -1,0 +1,17 @@
+.login-container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    
+    ion-item {
+      margin-bottom: 15px;
+    }
+  
+    ion-button {
+      margin-top: 30px;
+    }
+  }
+
+  ion-header::after {
+    background-image: none;
+  }

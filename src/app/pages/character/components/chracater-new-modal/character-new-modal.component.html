@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">X</ion-button>
+    </ion-buttons>
+    <ion-title>Nuevo Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="submitForm()" [strong]="true">Ok</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-input label="Nombre" placeholder="Ingrese nombre" formControlName="name"
+            [errorText]="messages().name.message">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Apellidos" placeholder="Ingrese apellido" formControlName="last"
+            errorText="Invalid email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Edad" type="number" placeholder="00" formControlName="age"
+            errorText="Invalid email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Email input" type="email" placeholder="email@domain.com" errorText="Invalid email"
+            formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Date: *</ion-label>
+          <ion-datetime formControlName="dateOfBirth" displayFormat="DD.MM.YYYY" presentation="day-month-year"
+            formControlName="birthday"></ion-datetime>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </form>
+</ion-content>
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime id="datetime"></ion-datetime>
+  </ng-template>
+</ion-modal>

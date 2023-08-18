@@ -1,0 +1,65 @@
+.profile-header {
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile-emal {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.profile-info-element {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+}
+.profile-info-element-data {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-option {
+  display: flex;
+  flex-direction: row;
+}
+.profile-option-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-option-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.profile-option-text {
+  margin-left: 10px;
+}
