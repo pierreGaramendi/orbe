@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Personal Data</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [strong]="true" (click)="confirm()">
+        <ion-icon name="save-outline">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="userForm" novalidate>
+    <ion-item fill="outline" mode="md">
+      <ion-label></ion-label>
+      <ion-input type="email" inputmode="email" autocomplete="off" autocorrect="off" required autofocus
+        formControlName="name"></ion-input>
+    </ion-item>
+  </form>
+  <ion-toast [isOpen]="isToastOpen" message="Se registraron los datos!" [duration]="5000" class="custom-toast"
+    (didDismiss)="setOpen(false)"></ion-toast>
+
+</ion-content>

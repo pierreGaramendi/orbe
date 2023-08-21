@@ -4,16 +4,18 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderModule } from 'src/app/components/header/header.module';
 import { ProfilePageRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
-
-
+import { PersonalDataComponent } from './components';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ProfileComponent],
+  declarations: [ProfileComponent, PersonalDataComponent],
   imports: [
     CommonModule,
     ProfilePageRoutingModule,
     IonicModule,
-    HeaderModule
-  ]
+    HeaderModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
-export class ProfileModule { }
+export class ProfileModule {}

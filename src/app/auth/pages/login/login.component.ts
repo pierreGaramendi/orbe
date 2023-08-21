@@ -43,11 +43,19 @@ export class LoginComponent implements OnInit {
       try {
         const values = this.loginForm.value;
         const userdata = await this.authService.logging(values);
-        console.log(userdata)
+        console.log(userdata);
+        const userName = userdata.user?.displayName;
+        const userEmail = userdata.user?.email;
+        const userPhotoURL = userdata.user?.photoURL;
+        const userId = userdata.user?.uid;
+        const emailVerified = userdata.user?.emailVerified;
         await this.storage.set('in', true);
         await this.storage.set('iden', {
-          name: 'Pierre G',
-          email: 'pierre@gmail.com',
+          userId,
+          name: userName,
+          email: userEmail,
+          userPhotoURL,
+          emailVerified,
         });
         await this.router.navigate(['/app/characters']);
       } catch (e: any) {
