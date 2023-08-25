@@ -1,31 +1,29 @@
 <app-header title="Mi Perfil"></app-header>
 <ion-content>
-  <div class="profile-header">
-    <img class="profile-picture"
-      src="https://images.squarespace-cdn.com/content/v1/5e6ece70bd2f8a6de8472818/714f685e-d0ba-40f9-8bb2-38722c1fd29c/Tiny+Avatar.png"
-      alt="profile-picture">
-    <div class="profile-name">Pierre Garamendi</div>
-    <div>pierre@gmail.com</div>
+  <div class="flex flex-col justify-center items-center mb-8">
+    <img class="w-24 rounded mt-8" [src]="url" alt="profile-picture">
+    <div class="mt-6 text-2xl font-bold">{{user().name}}</div>
+    <div class="mt-1">{{user().email}}</div>
   </div>
-  <div class="profile-info">
-    <div class="profile-info-element">
-      <div class="profile-info-element-data">
+  <div class="flex flex-row m-2.5 justify-between mb-6">
+    <div class="flex flex-col justify-between items-center w-full">
+      <div class="font-bold">
         126/7
       </div>
       <div>
         Scans
       </div>
     </div>
-    <div class="profile-info-element">
-      <div class="profile-info-element-data">
+    <div class="flex flex-col justify-between items-center w-full">
+      <div class="font-bold">
         1/6
       </div>
       <div>
         Usuarios
       </div>
     </div>
-    <div class="profile-info-element">
-      <div class="profile-info-element-data">
+    <div class="flex flex-col justify-between items-center w-full">
+      <div class="font-bold">
         893/2500
       </div>
       <div>
@@ -35,12 +33,12 @@
   </div>
   <ion-card (click)="openPersonalDataModal()">
     <ion-card-content>
-      <div class="profile-option">
-        <div class="profile-option-head">
+      <div class="flex flex-row">
+        <div class="flex flex-row w-full items-center">
           <ion-icon size="small" name="settings-outline"></ion-icon>
-          <h2 class="profile-option-text">Settings</h2>
+          <div class="ml-2">Settings</div>
         </div>
-        <div class="profile-option-icon">
+        <div class="flex items-center">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </div>
       </div>

@@ -1,37 +1,32 @@
 <ion-header no-shadow>
-  <div class="ion-text-center ion-padding">
+  <div class="text-center p-4">
     <ion-title>Ingresa a tu Cuenta</ion-title>
   </div>
 </ion-header>
 <ion-content [fullscreen]="true">
-
-  <div class="login-container">
-    <div class="ion-text-center ion-padding">
-      <img style="width: 100px;" src="https://cdn-icons-png.flaticon.com/512/187/187879.png" alt="">
-      <ion-title class="ion-text-center ion-padding">Company Name</ion-title>
+  <div class="p-6">
+    <div class="flex flex-col justify-center items-center">
+      <img class="w-24" src="https://cdn-icons-png.flaticon.com/512/187/187879.png" alt="logo">
+      <ion-title class="mt-3">Company Name</ion-title>
     </div>
-    <form [formGroup]="loginForm" novalidate>
-      <div>Email</div>
+    <form class="mt-6" [formGroup]="loginForm" novalidate>
+      <div class="mb-2">Email</div>
       <ion-item fill="outline" mode="md">
         <ion-label></ion-label>
         <ion-input type="text" formControlName="email"></ion-input>
       </ion-item>
-      <div>Contraseña</div>
+      <div class="mt-6 mb-2">Contraseña</div>
       <ion-item fill="outline" mode="md">
         <ion-label></ion-label>
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
-
-      <div class="ion-text-end">
+      <div class="my-3 text-right">
         <a>Olvidaste tu contraseña?</a>
       </div>
-
-      <ion-button expand="block" (click)="submitForm()">Login</ion-button>
-
-      <div class="ion-text-center ion-margin-top">
+      <ion-button class="my-6" expand="block" (click)="submitForm()">Login</ion-button>
+      <div class="text-center my-7">
         <span>O ingresa con tu cuenta de</span>
       </div>
-
       <ion-button fill="outline" expand="block" class="ion-margin-top">
         <ion-icon name="logo-google"></ion-icon>&nbsp;
         Google
@@ -40,7 +35,7 @@
   </div>
 </ion-content>
 <ion-footer>
-  <div class="ion-text-center ion-padding">
+  <div class="text-center p-4">
     <span>Todavia no tienes cuenta?</span>&nbsp;
     <a href="#" target="#" rel="noopener noreferrer">Registrate</a>
   </div>

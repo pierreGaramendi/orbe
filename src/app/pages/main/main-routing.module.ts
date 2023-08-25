@@ -15,6 +15,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'camera',
+        loadChildren: () =>
+          import('../camera/camera.module').then(
+            (m) => m.CameraModule
+          ),
+      },
+      {
         path: 'settings',
         loadChildren: () =>
           import('../settings/settings.module').then(

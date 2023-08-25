@@ -28,7 +28,6 @@ export class PersonalDataComponent implements OnInit {
   }
 
   buildForm(name: string) {
-    console.log(name);
     this.userForm = this.formBuilder.group({
       name: [name, [Validators.required, Validators.minLength(2)]],
     });
@@ -42,16 +41,14 @@ export class PersonalDataComponent implements OnInit {
     if (this.userForm.invalid) {
       return;
     }
-    const { name  } = this.userForm.value
+    const { name } = this.userForm.value;
     updateProfile(this.user, { displayName: name })
-      .then((resp) => {
-        this.setOpen(true)
+      .then(() => {
+        this.setOpen(true);
         return this.modalCtrl.dismiss({}, 'confirm');
       })
       .catch((error) => {
         console.log(error);
       });
   }
-
-
 }
