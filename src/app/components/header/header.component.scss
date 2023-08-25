@@ -1,3 +1,9 @@
 ion-menu-button {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-primary-contrast);
+}
+ion-title {
+  color: var(--ion-color-primary-contrast);
+}
+ion-toolbar {
+  --background: var(--ion-color-primary);
 }

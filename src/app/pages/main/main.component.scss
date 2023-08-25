@@ -1,40 +1,30 @@
-.user-name {
-  font-size: 1.2rem;
-  font-weight: bolder;
-}
-
-.user-email {
-  font-size: 1rem;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: fit-content(50px) auto;
-  padding: 18px;
-  border-bottom: 1px solid gray;
-}
 ion-list {
-  background-color: var(--ion-color-tertiary);
+  background-color: var(  --ion-color-primary);
 }
 ion-menu-toggle{
-  background-color: var(--ion-color-tertiary);
+  background-color: var(  --ion-color-primary);
 }
 
 ion-split-pane{ 
   --border: none !important;
   ion-menu{
-   --background: var(--ion-color-tertiary) !important; 
+   --background: var(  --ion-color-primary) !important; 
       ion-content{            
-          --background: var(--ion-color-tertiary) !important; 
+          --background: var(  --ion-color-primary) !important; 
           ion-list-header{ 
-              --background: var(--ion-color-tertiary) !important;
+              --background: var(  --ion-color-primary) !important;
               --color: #FFFFFF !important;   
           }
           ion-item{
-              --background: var(--ion-color-tertiary) !important;
+              --background: var(  --ion-color-primary) !important;
                --color: #FFFFFF !important;
                ion-icon{ padding-right: 10px !important; }
           }
       }
   }
+}
+
+ion-icon {
+  color: white;
+  --ionicon-stroke-width: 16px;
 }
