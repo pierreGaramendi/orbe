@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
 import { AuthService } from '../../auth/auth.service';
@@ -7,6 +7,7 @@ import { appPages, userMock } from './main.constants';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainComponent implements OnInit {
   user = Object.assign({}, userMock);

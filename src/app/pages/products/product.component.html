@@ -1,0 +1,30 @@
+<app-header title="Productos" />
+<ion-toolbar>
+  <div class="flex flex-row justify-between items-center">
+    <div class="px-2 font-semibold">
+      157 Resultados
+    </div>
+    <div class="p-2 font-medium">
+      Filtrar (2)
+    </div>
+  </div>
+</ion-toolbar>
+<ion-content>
+  <div class="grid grid-cols-2">
+    <ng-template ngFor let-item [ngForOf]="skeletonItemsArray">
+      <v-card>
+        <v-card-img [url]="url" />
+        <div class="p-2 text-black">
+          <div class="text-base font-medium">
+            Apple iPhone 13 (128 GB) - Azul medianoche</div>
+          <div class="text-base font-bold">S/ 2899.50</div>
+          <div class="text-sm font-bold text-gray-400 line-through">S/ 2899.50</div>
+        </div>
+        <div class="w-6 h-6 absolute top-0 right-0 m-2 bg-gray-200 rounded-full flex justify-center items-center">
+          <ion-icon name="heart" color="danger"></ion-icon>
+        </div>
+        <app-chipi label="-20%" />
+      </v-card>
+    </ng-template>
+  </div>
+</ion-content>

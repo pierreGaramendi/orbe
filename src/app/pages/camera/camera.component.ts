@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
@@ -6,6 +6,7 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
   selector: 'app-camera',
   templateUrl: './camera.component.html',
   styleUrls: ['./camera.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CameraComponent implements OnInit {
   imageElement: any;

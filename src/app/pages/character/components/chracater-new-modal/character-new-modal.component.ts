@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CharacterService } from '../../character.service';
@@ -7,6 +7,7 @@ import { CharacterService } from '../../character.service';
   selector: 'app-character-new/modal',
   templateUrl: './character-new-modal.component.html',
   providers: [CharacterService],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharacterNewModal implements OnInit {
   character: any;

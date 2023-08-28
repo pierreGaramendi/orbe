@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CharacterService } from './character.service';
 import { ICharacter, ICharacterResult } from './models/characters.model';
@@ -10,6 +10,7 @@ import { CharacterModal, CharacterNewModal } from './components';
   selector: 'app-character',
   templateUrl: './character.component.html',
   providers: [CharacterService],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharacterComponent implements OnInit {
   charactersResult: ICharacterResult = CharacterResultState;

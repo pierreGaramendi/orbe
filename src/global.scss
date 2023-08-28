@@ -31,3 +31,7 @@
 @import "tailwindcss/utilities"; */
 @tailwind utilities;
 
+ion-content {
+    //--background: var(--ion-item-background, var(--ion-background-color, #fff));
+    --background: var(--ion-color-content);
+}

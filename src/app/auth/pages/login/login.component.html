@@ -1,13 +1,15 @@
-<ion-header no-shadow>
-  <div class="text-center p-4">
-    <ion-title>Ingresa a tu Cuenta</ion-title>
-  </div>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="text-center p-4">
+      <ion-title>Ingresa a tu Cuenta</ion-title>
+    </div>
+  </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
   <div class="p-6">
     <div class="flex flex-col justify-center items-center">
       <img class="w-24" src="https://cdn-icons-png.flaticon.com/512/187/187879.png" alt="logo">
-      <ion-title class="mt-3">Company Name</ion-title>
+      <div class="mt-3">Nostromo</div>
     </div>
     <form class="mt-6" [formGroup]="loginForm" novalidate>
       <div class="mb-2">Email</div>
@@ -24,8 +26,10 @@
         <a>Olvidaste tu contraseña?</a>
       </div>
       <ion-button class="my-6" expand="block" (click)="submitForm()">Login</ion-button>
-      <div class="text-center my-7">
-        <span>O ingresa con tu cuenta de</span>
+      <div class="grid grid-cols-5 justify-stretch">
+        <img class="h-16" src="assets/icon/line.svg">
+        <div class="text-black col-span-3">O ingresa con tu cuenta de</div>
+        <img class="h-16" src="assets/icon/line.svg">
       </div>
       <ion-button fill="outline" expand="block" class="ion-margin-top">
         <ion-icon name="logo-google"></ion-icon>&nbsp;
@@ -34,7 +38,7 @@
     </form>
   </div>
 </ion-content>
-<ion-footer>
+<ion-footer class="ion-no-border hide-on-keyboard-open">
   <div class="text-center p-4">
     <span>Todavia no tienes cuenta?</span>&nbsp;
     <a href="#" target="#" rel="noopener noreferrer">Registrate</a>

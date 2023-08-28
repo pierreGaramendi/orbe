@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { PersonalDataComponent } from './components';
 import { ModalController } from '@ionic/angular';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -8,6 +8,7 @@ import { userMock } from '../main';
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProfileComponent implements OnInit {
   user = signal(userMock);

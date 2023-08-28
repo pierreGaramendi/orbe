@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,6 +8,7 @@ import { Storage } from '@ionic/storage-angular';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = this.formBuilder.group({});

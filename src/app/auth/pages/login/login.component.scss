@@ -1,0 +1,10 @@
+ion-toolbar {
+  --background: var(--ion-color-primary);
+}
+ion-title {
+  color: var(--ion-color-primary-contrast);
+  font-weight: bold;
+}
+body.keyboard-open .has-footer {
+  bottom: 0;
+}

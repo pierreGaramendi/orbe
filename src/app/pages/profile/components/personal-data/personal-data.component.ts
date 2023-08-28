@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { getAuth, updateProfile } from 'firebase/auth';
@@ -7,6 +7,7 @@ import { getAuth, updateProfile } from 'firebase/auth';
   selector: 'app-personal-data',
   templateUrl: './personal-data.component.html',
   styleUrls: ['./personal-data.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PersonalDataComponent implements OnInit {
   user: any = getAuth().currentUser;
