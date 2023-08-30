@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,14 +13,15 @@ import { Storage } from '@ionic/storage-angular';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = this.formBuilder.group({});
   isAlertOpen = false;
+  isAlertNetworkOpen = false;
   errorMessageAlert = signal('Ha ocurrido un error');
   public alertButtons = ['OK'];
-
+  public onlineOffline: boolean = navigator.onLine;
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -24,8 +30,16 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.checkNetwork()
     this.buildForm();
   }
+
+  checkNetwork(){
+    if (!navigator.onLine) {
+      this.setNetowrkAlertOpen(true);
+    }
+  }
+
   buildForm() {
     this.loginForm = this.formBuilder.group({
       password: ['123456', [Validators.required, Validators.minLength(2)]],
@@ -74,5 +88,9 @@ export class LoginComponent implements OnInit {
 
   setOpen(isOpen: boolean) {
     this.isAlertOpen = isOpen;
+  }
+
+  setNetowrkAlertOpen(isOpen: boolean) {
+    this.isAlertNetworkOpen = isOpen;
   }
 }

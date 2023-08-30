@@ -8,9 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { NoInternetModal } from './components';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,NoInternetModal],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
