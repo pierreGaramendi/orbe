@@ -32,6 +32,10 @@
 @tailwind utilities;
 
 ion-content {
-    //--background: var(--ion-item-background, var(--ion-background-color, #fff));
-    --background: var(--ion-color-content);
+  //--background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--ion-color-content);
+}
+
+.input-outline.input-shape-round {
+  --border-radius: 50px!important;
 }
